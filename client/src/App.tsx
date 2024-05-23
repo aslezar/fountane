@@ -38,6 +38,12 @@ import AssignVendors from "./Pages/AssignVendors"
 import VendorChat from "./Pages/VendorChat"
 import SearchVendors from "./Pages/SearchVendors"
 
+import ShadEventPage from "./shadcnPages/event"
+import ShadSearchVendorPage from "./shadcnPages/searchVendor"
+import ShadSubEventPage from "./shadcnPages/subEvent"
+import ShadTempPage from "./shadcnPages/temp"
+import ShadVendorPage from "./shadcnPages/vendors"
+
 const Layout = () => {
   const location = useLocation()
   const hideNavbarRoutes = [
@@ -134,10 +140,10 @@ const router = createBrowserRouter([
         path: "assign-vendors/:id",
         element: <AssignVendors />,
       },
-        {
-          path: "assign-vendors/:id",
-          element: <AssignVendors />,
-        },
+      {
+        path: "assign-vendors/:id",
+        element: <AssignVendors />,
+      },
       {
         path: "search-vendors/:id",
         element: <SearchVendors />,
@@ -165,6 +171,26 @@ const router = createBrowserRouter([
       {
         path: "user/:id",
         element: <PublicProfilePage />,
+      },
+      {
+        path: "/shad/event",
+        element: <ShadEventPage />,
+      },
+      {
+        path: "/shad/vendor",
+        element: <ShadVendorPage />,
+      },
+      {
+        path: "/shad/search",
+        element: <ShadSearchVendorPage />,
+      },
+      {
+        path: "/shad/emp",
+        element: <ShadTempPage />,
+      },
+      {
+        path: "/shad/subEvent",
+        element: <ShadSubEventPage />,
       },
       {
         path: "/*",
